@@ -1,0 +1,183 @@
+.sr-only {
+	border: 0;
+	height: 0;
+	width: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	float: left;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background-color: #fff;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 80px;
+		// max-width: 1440px;
+		margin: 0 auto;
+
+		@media screen and (max-width: 992px) {
+			padding: 20px 20px;
+		}
+	}
+
+	&__logo {
+		img {
+			object-fit: contain;
+			width: 144px;
+			height: 165px;
+		}
+
+		@media screen and (max-width: 992px) {
+			order: 1;
+			position: relative;
+			z-index: 999;
+
+			img {
+				width: 60px;
+				height: auto;
+			}
+
+		}
+	}
+
+	&__toggle {
+		display: none;
+		position: relative;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		z-index: 9999;
+		background-color: transparent;
+
+
+		@media screen and (max-width: 992px) {
+			display: flex;
+			order: 3;
+			margin-left: 16px;
+		}
+
+		.close,
+		.open {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+
+			svg {
+				width: 52px;
+				height: 52px;
+			}
+		}
+
+		.open {
+			opacity: 1;
+		}
+
+		&[aria-expanded='true'] {
+			.close {
+				opacity: 1;
+			}
+
+			.open {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media screen and (max-width: 992px) {
+			flex-direction: column;
+			height: 100%;
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+.nav {
+	position: relative;
+
+
+	@media screen and (max-width: 992px) {
+		width: 100vw;
+		position: absolute;
+		background-color: white;
+		height: 100vh;
+		transform: translateX(100%);
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		transition: transform 0.3s ease-in-out;
+
+		&--cta {
+			@media screen and (max-width: 992px) {
+				order: 2;
+				margin-left: auto
+			}
+		}
+	}
+
+	&[data-visible='true'] {
+		transform: translate(0);
+	}
+
+	&__item {
+		margin: 0 10px;
+
+		@media screen and (max-width: 992px) {
+			margin: 10px 0;
+		}
+
+		&--mobile {
+			display: none;
+
+			@media screen and (max-width: 992px) {
+				display: block;
+			}
+		}
+	}
+
+	&__link {
+		color: #000;
+		text-decoration: none;
+
+		&--cta {
+			display: flex;
+			align-items: center;
+			background-color: $gp-orange;
+			padding: 8px 16px;
+			border-radius: 20px;
+			color: #FFF;
+			font-family: $gp-heading-font;
+			font-size: 15px;
+			font-weight: 600;
+
+			span {
+				margin: 0 4px;
+			}
+		}
+	}
+}
