@@ -1,0 +1,56 @@
+.share-badge {
+	position: fixed;
+	left: 0;
+	top: 340px;
+
+	@media screen and (max-width: 992px) {
+		top: 250px;
+
+	}
+
+	&__wrapper {
+		background-color: $gp-orange;
+		padding: 30px 5px;
+		border-top-right-radius: 12px;
+		border-bottom-right-radius: 12px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@media screen and (max-width: 992px) {
+			padding: 20px 2px;
+		}
+	}
+
+	// TODO: add this style to all of list within gp-section
+	&__icon {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		button {
+			background-color: transparent;
+			padding: 0 4px;
+			cursor: pointer;
+
+			svg {
+				color: white;
+				width: 30px;
+
+				@media screen and (max-width: 992px) {
+					width: 20px;
+				}
+			}
+		}
+	}
+
+	&__item {
+		margin: 16px 0;
+
+		@media screen and (max-width: 992px) {
+			margin: 8px 0;
+
+		}
+	}
+}

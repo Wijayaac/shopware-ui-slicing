@@ -34,3 +34,32 @@ function headerNavigation () {
 }
 
 headerNavigation()
+
+
+// social media share button
+function socialMediaShare () {
+	const shareBtn = document.querySelectorAll('.share-badge__button')
+	if (!shareBtn[0]) {
+		return
+	}
+
+	shareBtn.forEach(function (btn) {
+		btn.addEventListener('click', function (e) {
+			e.preventDefault()
+			const url = window.location.href
+			const socialMedia = btn.getAttribute('data-social-media')
+			let shareUrl = ''
+			switch (socialMedia) {
+				case 'facebook':
+					shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`
+					break
+				case 'twitter':
+					shareUrl = `https://twitter.com/intent/tweet?url=${url}`
+					break
+			}
+			window.open(shareUrl, '_blank')
+		})
+	})
+}
+
+socialMediaShare()
