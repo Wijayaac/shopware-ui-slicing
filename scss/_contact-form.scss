@@ -1,0 +1,161 @@
+// GP Contact form
+.gp-cf {
+	padding-top: 100px;
+	position: relative;
+	overflow: hidden;
+
+	&__wrapper {
+		&--green {
+			background-color: #bad3a5;
+			padding-bottom: 200px;
+			margin-top: -270px;
+		}
+	}
+
+	&__content {
+		padding-left: 80px;
+		padding-right: 40px;
+	}
+
+	&__heading {
+		h1 {
+			color: #000;
+
+			font-size: 70px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 115.92%;
+			/* 81.144px */
+			margin-bottom: 16px;
+		}
+
+		p {
+			color: #000;
+
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+	}
+
+	&__icon {
+		color: #000;
+
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-top: 24px;
+		display: flex;
+		align-items: center;
+
+		span {
+			margin-left: 16px;
+		}
+	}
+
+	&__body {
+		padding-top: 50px;
+		padding-left: 80px;
+
+		p {
+			color: #000;
+
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			margin-bottom: 24px;
+		}
+	}
+
+	&__form {
+		background-color: #f97231;
+		padding: 48px 55px;
+		filter: drop-shadow(0px 0px 7.7px rgba(0, 0, 0, 0.1));
+		border-radius: 16px;
+	}
+
+	&__fields {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 24px;
+
+		.error-message {
+			opacity: 0;
+			visibility: hidden;
+			color: #d30707;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			margin-top: 8px;
+		}
+
+		&.error {
+			.error-message {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		label {
+			color: #fff;
+
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			display: block;
+			margin-bottom: 16px;
+
+			span {
+				color: #fff;
+				font: 14px;
+			}
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			outline: none;
+			border: none;
+			border-radius: 12px;
+		}
+
+		input {
+			height: 50px;
+			padding: 5px 10px;
+		}
+
+		textarea {
+			height: 120px;
+			padding: 15px;
+		}
+	}
+
+	&__submit {
+		margin-top: 16px;
+
+		button {
+			width: 180px;
+			color: #f97231;
+			text-align: center;
+			cursor: pointer;
+
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			background-color: #fff;
+			border-radius: 20px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+	}
+}
