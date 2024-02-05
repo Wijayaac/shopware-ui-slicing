@@ -7,7 +7,12 @@
 	&__wrapper {
 		&--green {
 			background-color: #bad3a5;
-			padding-bottom: 200px;
+			padding-bottom: 400px;
+
+			@media screen and (min-width: 992px) {
+				padding-bottom: 768px;
+			}
+
 			margin-top: -270px;
 		}
 	}
@@ -41,12 +46,11 @@
 
 	&__icon {
 		color: #000;
-
 		font-size: 18px;
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
-		margin-top: 24px;
+		margin: 24px 0;
 		display: flex;
 		align-items: center;
 
@@ -156,6 +160,19 @@
 			border-radius: 20px;
 			padding-top: 8px;
 			padding-bottom: 8px;
+		}
+	}
+
+	&__background {
+		img {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 }
