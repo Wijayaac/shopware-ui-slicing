@@ -5,9 +5,13 @@
 	overflow: hidden;
 
 	&__wrapper {
+		position: relative;
+		z-index: 2;
+
 		&--green {
 			background-color: #bad3a5;
 			padding-bottom: 400px;
+			position: relative;
 
 			@media screen and (min-width: 992px) {
 				padding-bottom: 768px;
