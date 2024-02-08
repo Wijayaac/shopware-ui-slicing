@@ -147,3 +147,21 @@ function contactFormSubmit () {
 }
 
 contactFormSubmit()
+
+
+function toggleProductDescription () {
+	const productDescription = document.querySelector('.gp-pdp__description')
+	if (!productDescription) {
+		return
+	}
+
+	const toggleBtn = productDescription.querySelector('.gp-pdp__description-toggle')
+	const descriptionContent = productDescription.querySelector('.gp-pdp__description-content')
+	toggleBtn.addEventListener('click', function () {
+		descriptionContent.classList.toggle('is-toggled')
+
+	})
+
+}
+
+toggleProductDescription()

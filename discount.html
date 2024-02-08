@@ -5,440 +5,247 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Discount Page</title>
-	<link rel="stylesheet" href="./style.scss">
+	<link rel="stylesheet" href="./scss/style.scss">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<header class="header">
-		<div class="header__wrapper container">
-			<div class="header__logo"><img src="/logo-header.png" alt="logo header"></div>
-			<button class="header__toggle" aria-controls="header__nav" aria-expanded="false">
-				<span class="sr-only">Menu</span>
-				<span class="open">
-					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
-						<g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
-							<path d="M7.94971 11.9497H39.9497" />
-							<path d="M7.94971 23.9497H39.9497" />
-							<path d="M7.94971 35.9497H39.9497" />
-						</g>
-					</svg>
-				</span>
-				<span class="close">
-					<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-						<g fill="none" fill-rule="evenodd">
-							<path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-							<path fill="black" d="m12 14.122l5.303 5.303a1.5 1.5 0 0 0 2.122-2.122L14.12 12l5.304-5.303a1.5 1.5 0 1 0-2.122-2.121L12 9.879L6.697 4.576a1.5 1.5 0 1 0-2.122 2.12L9.88 12l-5.304 5.304a1.5 1.5 0 1 0 2.122 2.12z" />
-						</g>
-					</svg>
-				</span>
-			</button>
-			<nav class="nav" data-visible="false">
-				<ul class="header__nav">
-					<li class="nav__item">
-						<a href="/" class="nav__link"> Home </a>
-					</li>
-					<li class="nav__item">
-						<a href="about" class="nav__link"> About </a>
-					</li>
-					<li class="nav__item">
-						<a href="news" class="nav__link"> News </a>
-					</li>
-					<li class="nav__item">
-						<a href="discount.html" class="nav__link"> Grower Discount </a>
-					</li>
-					<li class="nav__item">
-						<a href="contact.html" class="nav__link"> Contact </a>
-					</li>
-					<li class="nav__item">
-						<a href="voucher.html" class="nav__link"> Voucher / Affiliate </a>
-					</li>
-					<li class="nav__item nav__item--mobile">
-						<a href="/" class="nav__link nav__link--cta">
-							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-								<path d="M18.3081 5.24856C18.2136 4.29293 17.8366 3.3653 17.6058 2.4212C17.4557 1.80657 17.3249 1.18738 17.207 0.566587C17.1497 0.269087 17.0609 0.167064 16.7479 0.314647C16.0511 0.644336 15.3611 1.01388 14.6291 1.23625C13.2525 1.64765 11.9589 2.29796 10.8075 3.15747C11.1178 3.41614 11.2974 3.57322 11.2974 3.57322C11.2974 3.57322 15.8481 10.4776 14.3306 16.7162C14.3204 16.7554 14.3092 16.7934 14.2991 16.8326C14.4544 16.6983 14.5969 16.5498 14.7247 16.3891C17.2293 13.0975 18.7266 9.46732 18.3081 5.24856Z" fill="white" />
-								<path d="M1.34619 12.9485C1.69773 14.4679 2.23625 15.9028 3.2246 17.1305C5.51437 19.9749 10.1334 19.7654 12.0332 16.7309C12.794 15.5161 12.9318 14.1591 12.7726 12.785C12.4264 9.81567 11.4466 7.06538 9.68468 4.62709C8.59213 3.0873 7.11977 1.85641 5.41073 1.05406C5.05919 0.888442 4.78994 0.549731 4.4758 0.299705C4.37429 0.2185 4.20547 0.0795953 4.15525 0.11165C4.04156 0.201957 3.95777 0.324478 3.91484 0.463184C3.76846 0.817922 3.7129 1.23463 3.49386 1.53167C0.942307 5.00106 0.434774 8.83907 1.34619 12.9485Z" fill="white" />
-							</svg>
-							<span>Shop the seed</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="nav--cta">
-				<a href="/" class="nav__link nav__link--cta">
-					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-						<path d="M18.3081 5.24856C18.2136 4.29293 17.8366 3.3653 17.6058 2.4212C17.4557 1.80657 17.3249 1.18738 17.207 0.566587C17.1497 0.269087 17.0609 0.167064 16.7479 0.314647C16.0511 0.644336 15.3611 1.01388 14.6291 1.23625C13.2525 1.64765 11.9589 2.29796 10.8075 3.15747C11.1178 3.41614 11.2974 3.57322 11.2974 3.57322C11.2974 3.57322 15.8481 10.4776 14.3306 16.7162C14.3204 16.7554 14.3092 16.7934 14.2991 16.8326C14.4544 16.6983 14.5969 16.5498 14.7247 16.3891C17.2293 13.0975 18.7266 9.46732 18.3081 5.24856Z" fill="white" />
-						<path d="M1.34619 12.9485C1.69773 14.4679 2.23625 15.9028 3.2246 17.1305C5.51437 19.9749 10.1334 19.7654 12.0332 16.7309C12.794 15.5161 12.9318 14.1591 12.7726 12.785C12.4264 9.81567 11.4466 7.06538 9.68468 4.62709C8.59213 3.0873 7.11977 1.85641 5.41073 1.05406C5.05919 0.888442 4.78994 0.549731 4.4758 0.299705C4.37429 0.2185 4.20547 0.0795953 4.15525 0.11165C4.04156 0.201957 3.95777 0.324478 3.91484 0.463184C3.76846 0.817922 3.7129 1.23463 3.49386 1.53167C0.942307 5.00106 0.434774 8.83907 1.34619 12.9485Z" fill="white" />
-					</svg>
-					<span>Shop the seed</span>
-				</a>
-			</nav>
+	<template data-type="pug" data-src="./template/header.pug"></template>
+	<main>
+		<div class="grower-footer">
+			<p>Promo Code</p>
+			<a href="#" target="_self" class="gp-btn">Buy</a>
 		</div>
-	</header>
-	<div class="grower-footer">
-		<p>Promo Code</p>
-		<a href="#" target="_self" class="gp-btn">Buy</a>
-	</div>
-	<div class="gp-tm">
-		<div class="gp-tm__wrapper container">
-			<div class="gp-tm__row row">
-				<div class="col">
-					<div class="gp-tm__image">
-						<img src="/discount-hero.png" alt="">
+		<div class="gp-tm">
+			<div class="gp-tm__wrapper container">
+				<div class="gp-tm__row row">
+					<div class="col">
+						<div class="gp-tm__image">
+							<img src="/discount-hero.png" alt="">
+						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="gp-tm__content">
-						<h1>The Legend Grows On</h1>
-						<p>Purchase seeds from the world-renowned “Michael Jordan” pumpkin today, and let the legend grow on</p>
+					<div class="col">
+						<div class="gp-tm__content">
+							<h1>The Legend Grows On</h1>
+							<p>Purchase seeds from the world-renowned “Michael Jordan” pumpkin today, and let the legend grow on</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="bg-orange">
-		<div class="arrow-down arrow-down--white">
-			<div class="arrow-down__wrapper">
-				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-					<g clip-path="url(#clip0_132_2119)">
-						<path d="M16.0256 25.4822C18.7838 22.721 21.4863 20.0155 24.1902 17.3128C25.2882 16.2153 26.3527 15.0803 27.505 14.0412C29.1012 12.6001 31.5017 13.4027 31.9414 15.492C32.1627 16.5422 31.7369 17.3852 31.0035 18.1168C28.0978 21.0129 25.1958 23.9127 22.2976 26.8162C20.9218 28.1932 19.5445 29.5694 18.1659 30.9446C16.759 32.3454 15.2435 32.3537 13.8519 30.9586C9.57135 26.6854 5.2917 22.4099 1.01297 18.1321C0.280989 17.4005 -0.155975 16.5631 0.05694 15.5115C0.493904 13.361 2.95983 12.5904 4.5894 14.1205C6.09094 15.5337 7.52013 17.0221 8.97992 18.4813C11.1749 20.6744 13.369 22.8694 15.5622 25.0663C15.693 25.1942 15.8336 25.3097 16.0256 25.4822Z" fill="white" />
-						<path d="M16.6756 9.42847C17.8279 8.3421 18.9231 7.31415 20.0155 6.28063C21.8649 4.52519 23.706 2.76418 25.5569 1.01013C26.6966 -0.0706822 28.0033 -0.289066 29.2432 0.378615C30.8714 1.25355 31.1637 3.32893 29.7999 4.66846C28.3137 6.13179 26.7815 7.54644 25.2688 8.98057C23.1582 10.992 21.0425 13.002 18.9217 15.0106C17.5217 16.3348 15.8518 16.3459 14.4574 15.0273C10.9265 11.6824 7.39826 8.33236 3.87286 4.97727C2.4576 3.63078 2.29617 2.0659 3.43033 0.889109C4.60206 -0.326627 6.42785 -0.289068 7.78466 0.994826C10.4751 3.54314 13.1632 6.09563 15.849 8.65229C16.0981 8.89154 16.3542 9.12384 16.6756 9.42847Z" fill="#FEE3CE" />
-					</g>
-					<defs>
-						<clipPath id="clip0_132_2119">
-							<rect width="32" height="32" fill="white" transform="translate(32) rotate(90)" />
-						</clipPath>
-					</defs>
-				</svg>
-				<span>Shop the seeds</span>
-			</div>
-		</div>
-	</div>
-	<div class="discount-cta">
-		<div class="discount-cta__wrapper container">
-			<div class="discount-cta__row row">
-				<div class="col">
-					<div class="discount-cta__content">
-						<h2>Hurry up and grab the Grower Discount now</h2>
-						<a href="/">Get promo code</a>
-					</div>
-				</div>
-				<div class="col">
-					<div class="discount-cta__image">
-						<img src="/discount-cta.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="gp-discount gp-discont--company">
-		<div class="arrow-down arrow-down--white">
-			<div class="arrow-down__wrapper">
-				<span>
-					<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g id="Layer_1" clip-path="url(#clip0_119_1183)">
-							<path id="Vector" d="M16.0257 25.4822C18.7839 22.721 21.4864 20.0155 24.1903 17.3128C25.2883 16.2153 26.3529 15.0803 27.5051 14.0412C29.1013 12.6001 31.5018 13.4027 31.9416 15.492C32.1628 16.5422 31.737 17.3852 31.0036 18.1168C28.0979 21.0129 25.196 23.9127 22.2977 26.8162C20.9219 28.1932 19.5447 29.5694 18.166 30.9446C16.7591 32.3454 15.2437 32.3537 13.8521 30.9586C9.57147 26.6854 5.29182 22.4099 1.0131 18.1321C0.281111 17.4005 -0.155853 16.5631 0.0570621 15.5115C0.494026 13.361 2.95995 12.5904 4.58952 14.1205C6.09107 15.5337 7.52025 17.0221 8.98004 18.4813C11.1751 20.6744 13.3692 22.8694 15.5623 25.0663C15.6932 25.1942 15.8337 25.3097 16.0257 25.4822Z" fill="white"></path>
-							<path id="Vector_2" d="M16.6756 9.42847C17.8279 8.3421 18.9231 7.31415 20.0155 6.28063C21.8649 4.52519 23.706 2.76418 25.5569 1.01013C26.6966 -0.0706822 28.0033 -0.289066 29.2432 0.378615C30.8714 1.25355 31.1636 3.32893 29.7999 4.66846C28.3136 6.13179 26.7815 7.54644 25.2688 8.98057C23.1582 10.992 21.0425 13.002 18.9217 15.0106C17.5217 16.3348 15.8518 16.3459 14.4574 15.0273C10.9264 11.6824 7.39825 8.33236 3.87284 4.97727C2.45758 3.63078 2.29615 2.0659 3.43031 0.889109C4.60205 -0.326627 6.42783 -0.289068 7.78465 0.994826C10.4751 3.54314 13.1632 6.09563 15.849 8.65229C16.0981 8.89154 16.3542 9.12384 16.6756 9.42847Z" fill="#FEE3CE"></path>
+		<div class="bg-orange">
+			<div class="arrow-down arrow-down--white">
+				<div class="arrow-down__wrapper">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<g clip-path="url(#clip0_132_2119)">
+							<path d="M16.0256 25.4822C18.7838 22.721 21.4863 20.0155 24.1902 17.3128C25.2882 16.2153 26.3527 15.0803 27.505 14.0412C29.1012 12.6001 31.5017 13.4027 31.9414 15.492C32.1627 16.5422 31.7369 17.3852 31.0035 18.1168C28.0978 21.0129 25.1958 23.9127 22.2976 26.8162C20.9218 28.1932 19.5445 29.5694 18.1659 30.9446C16.759 32.3454 15.2435 32.3537 13.8519 30.9586C9.57135 26.6854 5.2917 22.4099 1.01297 18.1321C0.280989 17.4005 -0.155975 16.5631 0.05694 15.5115C0.493904 13.361 2.95983 12.5904 4.5894 14.1205C6.09094 15.5337 7.52013 17.0221 8.97992 18.4813C11.1749 20.6744 13.369 22.8694 15.5622 25.0663C15.693 25.1942 15.8336 25.3097 16.0256 25.4822Z" fill="white" />
+							<path d="M16.6756 9.42847C17.8279 8.3421 18.9231 7.31415 20.0155 6.28063C21.8649 4.52519 23.706 2.76418 25.5569 1.01013C26.6966 -0.0706822 28.0033 -0.289066 29.2432 0.378615C30.8714 1.25355 31.1637 3.32893 29.7999 4.66846C28.3137 6.13179 26.7815 7.54644 25.2688 8.98057C23.1582 10.992 21.0425 13.002 18.9217 15.0106C17.5217 16.3348 15.8518 16.3459 14.4574 15.0273C10.9265 11.6824 7.39826 8.33236 3.87286 4.97727C2.4576 3.63078 2.29617 2.0659 3.43033 0.889109C4.60206 -0.326627 6.42785 -0.289068 7.78466 0.994826C10.4751 3.54314 13.1632 6.09563 15.849 8.65229C16.0981 8.89154 16.3542 9.12384 16.6756 9.42847Z" fill="#FEE3CE" />
 						</g>
 						<defs>
-							<clipPath id="clip0_119_1183">
-								<rect width="32" height="32" fill="white" transform="translate(32) rotate(90)"></rect>
+							<clipPath id="clip0_132_2119">
+								<rect width="32" height="32" fill="white" transform="translate(32) rotate(90)" />
 							</clipPath>
 						</defs>
 					</svg>
-				</span>
-				<span class="arrow-down__label">Shop</span>
+					<span>Shop the seeds</span>
+				</div>
 			</div>
 		</div>
-		<div class="gp-discount__wrapper container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="gp-discount__card">
-						<div data-cms-element-id="018d5ea73dce7a6089395d42f24d0c19" class="gp-discount__card-title">
-							<div class="cms-element-text">
-								<h2>Company Name</h2>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dce7a6089395d43cca001c4" class="gp-discount__card-description">
-							<div class="cms-element-image justify-content-start">
-								<div class="cms-image-container is-standard">
-									<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
-								</div>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dcf783781abe912dd94689e" class="gp-discount__card-description">
-							<div class="cms-element-text">
-								<p>2,749 pound World Record Pumpkin Michael Jordan</p>
-								<div class="grower-footer">
-									<p>Promo Code</p>
-									<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
-								</div>
-							</div>
+		<div class="discount-cta">
+			<div class="discount-cta__wrapper container">
+				<div class="discount-cta__row row">
+					<div class="col">
+						<div class="discount-cta__content">
+							<h2>Hurry up and grab the Grower Discount now</h2>
+							<a href="/">Get promo code</a>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="gp-discount__card">
-						<div data-cms-element-id="018d5ea73dcf783781abe9134f224b35" class="gp-discount__card-title">
-							<div class="cms-element-text">
-								<h2>Company Name</h2>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dcf783781abe914dc087a9d" class="gp-discount__card-description">
-							<div class="cms-element-image justify-content-start">
-								<div class="cms-image-container is-standard">
-									<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
-								</div>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dcf783781abe915917b2101" class="gp-discount__card-description">
-							<div class="cms-element-text">
-								<p>2,749 pound World Record Pumpkin Michael Jordan</p>
-								<div class="grower-footer">
-									<p>Promo Code</p>
-									<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="gp-discount__card">
-						<div data-cms-element-id="018d5ea73dcf783781abe916db6988a3" class="gp-discount__card-title">
-							<div class="cms-element-text">
-								<h2>Company Name</h2>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dcf783781abe9172fd2a9ec" class="gp-discount__card-description">
-							<div class="cms-element-image justify-content-start">
-								<div class="cms-image-container is-standard">
-									<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
-								</div>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dcf783781abe91815010f83" class="gp-discount__card-description">
-							<div class="cms-element-text">
-								<p>2,749 pound World Record Pumpkin Michael Jordan</p>
-								<div class="grower-footer">
-									<p>Promo Code</p>
-									<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="gp-discount__card">
-						<div data-cms-element-id="018d5ea73dd077f8b50459d722fd0882" class="gp-discount__card-title">
-							<div class="cms-element-text">
-								<h2>Company Name</h2>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dd077f8b50459d8a4c44b22" class="gp-discount__card-description">
-							<div class="cms-element-image justify-content-start">
-								<div class="cms-image-container is-standard">
-									<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
-								</div>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dd077f8b50459d98e8fc99e" class="gp-discount__card-description">
-							<div class="cms-element-text">
-								<p>2,749 pound World Record Pumpkin Michael Jordan</p>
-								<div class="grower-footer">
-									<p>Promo Code</p>
-									<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="gp-discount__card">
-						<div data-cms-element-id="018d5ea73dd077f8b50459da14cfbee7" class="gp-discount__card-title">
-							<div class="cms-element-text">
-								<h2>Company Name</h2>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dd077f8b50459dbb285220d" class="gp-discount__card-description">
-							<div class="cms-element-image justify-content-start">
-								<div class="cms-image-container is-standard">
-									<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
-								</div>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dd077f8b50459dc4e7d0979" class="gp-discount__card-description">
-							<div class="cms-element-text">
-								<p>2,749 pound World Record Pumpkin Michael Jordan</p>
-								<div class="grower-footer">
-									<p>Promo Code</p>
-									<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="gp-discount__card">
-						<div data-cms-element-id="018d5ea73dd077f8b50459ddf03e61d1" class="gp-discount__card-title">
-							<div class="cms-element-text">
-								<h2>Company Name</h2>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dd077f8b50459de8c8a823b" class="gp-discount__card-description">
-							<div class="cms-element-image justify-content-start">
-								<div class="cms-image-container is-standard">
-									<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
-								</div>
-							</div>
-						</div>
-						<div data-cms-element-id="018d5ea73dd077f8b50459df2eecca03" class="gp-discount__card-description">
-							<div class="cms-element-text">
-								<p>2,749 pound World Record Pumpkin Michael Jordan</p>
-								<div class="grower-footer">
-									<p>Promo Code</p>
-									<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
-								</div>
-							</div>
+					<div class="col">
+						<div class="discount-cta__image">
+							<img src="/discount-cta.png" alt="">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- <div class="gp-products">
-		<div class="container gp-products__wrapper">
-			<div class="row">
-				<div class="col col-md-4">
-					<div class="gp-product">
-						<a href="/" class="gp-product__link">
-							<div class="gp-product__content">
-								<div class="gp-product__stock">Low Inventory</div>
-								<p class="gp-product__name">Tiger King</p>
-								<p class="gp-product__meta">details <br>here</p>
-								<div class="d-flex">
-									<span class="gp-product__price">US$ 33</span>
-									<button class="gp-product__cta">buy now</button>
-								</div>
-							</div>
-							<div class="gp-product__image">
-								<img src="/product.png" alt="">
-							</div>
-						</a>
-					</div>
+		<div class="gp-discount gp-discont--company">
+			<div class="arrow-down arrow-down--white">
+				<div class="arrow-down__wrapper">
+					<span>
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g id="Layer_1" clip-path="url(#clip0_119_1183)">
+								<path id="Vector" d="M16.0257 25.4822C18.7839 22.721 21.4864 20.0155 24.1903 17.3128C25.2883 16.2153 26.3529 15.0803 27.5051 14.0412C29.1013 12.6001 31.5018 13.4027 31.9416 15.492C32.1628 16.5422 31.737 17.3852 31.0036 18.1168C28.0979 21.0129 25.196 23.9127 22.2977 26.8162C20.9219 28.1932 19.5447 29.5694 18.166 30.9446C16.7591 32.3454 15.2437 32.3537 13.8521 30.9586C9.57147 26.6854 5.29182 22.4099 1.0131 18.1321C0.281111 17.4005 -0.155853 16.5631 0.0570621 15.5115C0.494026 13.361 2.95995 12.5904 4.58952 14.1205C6.09107 15.5337 7.52025 17.0221 8.98004 18.4813C11.1751 20.6744 13.3692 22.8694 15.5623 25.0663C15.6932 25.1942 15.8337 25.3097 16.0257 25.4822Z" fill="white"></path>
+								<path id="Vector_2" d="M16.6756 9.42847C17.8279 8.3421 18.9231 7.31415 20.0155 6.28063C21.8649 4.52519 23.706 2.76418 25.5569 1.01013C26.6966 -0.0706822 28.0033 -0.289066 29.2432 0.378615C30.8714 1.25355 31.1636 3.32893 29.7999 4.66846C28.3136 6.13179 26.7815 7.54644 25.2688 8.98057C23.1582 10.992 21.0425 13.002 18.9217 15.0106C17.5217 16.3348 15.8518 16.3459 14.4574 15.0273C10.9264 11.6824 7.39825 8.33236 3.87284 4.97727C2.45758 3.63078 2.29615 2.0659 3.43031 0.889109C4.60205 -0.326627 6.42783 -0.289068 7.78465 0.994826C10.4751 3.54314 13.1632 6.09563 15.849 8.65229C16.0981 8.89154 16.3542 9.12384 16.6756 9.42847Z" fill="#FEE3CE"></path>
+							</g>
+							<defs>
+								<clipPath id="clip0_119_1183">
+									<rect width="32" height="32" fill="white" transform="translate(32) rotate(90)"></rect>
+								</clipPath>
+							</defs>
+						</svg>
+					</span>
+					<span class="arrow-down__label">Shop</span>
 				</div>
-				<div class="col col-md-4">
-					<div class="gp-product">
-						<a href="/" class="gp-product__link">
-							<div class="gp-product__content">
-								<div class="gp-product__stock">Low Inventory</div>
-								<p class="gp-product__name">Tiger King</p>
-								<p class="gp-product__meta">details <br>here</p>
-								<div class="d-flex">
-									<span class="gp-product__price">US$ 33</span>
-									<button class="gp-product__cta">buy now</button>
+			</div>
+			<div class="gp-discount__wrapper container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="gp-discount__card">
+							<div data-cms-element-id="018d5ea73dce7a6089395d42f24d0c19" class="gp-discount__card-title">
+								<div class="cms-element-text">
+									<h2>Company Name</h2>
 								</div>
 							</div>
-							<div class="gp-product__image">
-								<img src="/product.png" alt="">
+							<div data-cms-element-id="018d5ea73dce7a6089395d43cca001c4" class="gp-discount__card-description">
+								<div class="cms-element-image justify-content-start">
+									<div class="cms-image-container is-standard">
+										<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
+									</div>
+								</div>
 							</div>
-						</a>
+							<div data-cms-element-id="018d5ea73dcf783781abe912dd94689e" class="gp-discount__card-description">
+								<div class="cms-element-text">
+									<p>2,749 pound World Record Pumpkin Michael Jordan</p>
+									<div class="grower-footer">
+										<p>Promo Code</p>
+										<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col col-md-4">
-					<div class="gp-product">
-						<a href="/" class="gp-product__link">
-							<div class="gp-product__content">
-								<div class="gp-product__stock">Low Inventory</div>
-								<p class="gp-product__name">Tiger King</p>
-								<p class="gp-product__meta">details <br>here</p>
-								<div class="d-flex">
-									<span class="gp-product__price">US$ 33</span>
-									<button class="gp-product__cta">buy now</button>
+					<div class="col-md-4">
+						<div class="gp-discount__card">
+							<div data-cms-element-id="018d5ea73dcf783781abe9134f224b35" class="gp-discount__card-title">
+								<div class="cms-element-text">
+									<h2>Company Name</h2>
 								</div>
 							</div>
-							<div class="gp-product__image">
-								<img src="/product.png" alt="">
+							<div data-cms-element-id="018d5ea73dcf783781abe914dc087a9d" class="gp-discount__card-description">
+								<div class="cms-element-image justify-content-start">
+									<div class="cms-image-container is-standard">
+										<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
+									</div>
+								</div>
 							</div>
-						</a>
+							<div data-cms-element-id="018d5ea73dcf783781abe915917b2101" class="gp-discount__card-description">
+								<div class="cms-element-text">
+									<p>2,749 pound World Record Pumpkin Michael Jordan</p>
+									<div class="grower-footer">
+										<p>Promo Code</p>
+										<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col col-md-4">
-					<div class="gp-product">
-						<a href="/" class="gp-product__link">
-							<div class="gp-product__content">
-								<div class="gp-product__stock">Low Inventory</div>
-								<p class="gp-product__name">Tiger King</p>
-								<p class="gp-product__meta">details <br>here</p>
-								<div class="d-flex">
-									<span class="gp-product__price">US$ 33</span>
-									<button class="gp-product__cta">buy now</button>
+					<div class="col-md-4">
+						<div class="gp-discount__card">
+							<div data-cms-element-id="018d5ea73dcf783781abe916db6988a3" class="gp-discount__card-title">
+								<div class="cms-element-text">
+									<h2>Company Name</h2>
 								</div>
 							</div>
-							<div class="gp-product__image">
-								<img src="/product.png" alt="">
+							<div data-cms-element-id="018d5ea73dcf783781abe9172fd2a9ec" class="gp-discount__card-description">
+								<div class="cms-element-image justify-content-start">
+									<div class="cms-image-container is-standard">
+										<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
+									</div>
+								</div>
 							</div>
-						</a>
+							<div data-cms-element-id="018d5ea73dcf783781abe91815010f83" class="gp-discount__card-description">
+								<div class="cms-element-text">
+									<p>2,749 pound World Record Pumpkin Michael Jordan</p>
+									<div class="grower-footer">
+										<p>Promo Code</p>
+										<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col col-md-4">
-					<div class="gp-product">
-						<a href="/" class="gp-product__link">
-							<div class="gp-product__content">
-								<div class="gp-product__stock">Low Inventory</div>
-								<p class="gp-product__name">Tiger King</p>
-								<p class="gp-product__meta">details <br>here</p>
-								<div class="d-flex">
-									<span class="gp-product__price">US$ 33</span>
-									<button class="gp-product__cta">buy now</button>
+					<div class="col-md-4">
+						<div class="gp-discount__card">
+							<div data-cms-element-id="018d5ea73dd077f8b50459d722fd0882" class="gp-discount__card-title">
+								<div class="cms-element-text">
+									<h2>Company Name</h2>
 								</div>
 							</div>
-							<div class="gp-product__image">
-								<img src="/product.png" alt="">
+							<div data-cms-element-id="018d5ea73dd077f8b50459d8a4c44b22" class="gp-discount__card-description">
+								<div class="cms-element-image justify-content-start">
+									<div class="cms-image-container is-standard">
+										<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
+									</div>
+								</div>
 							</div>
-						</a>
+							<div data-cms-element-id="018d5ea73dd077f8b50459d98e8fc99e" class="gp-discount__card-description">
+								<div class="cms-element-text">
+									<p>2,749 pound World Record Pumpkin Michael Jordan</p>
+									<div class="grower-footer">
+										<p>Promo Code</p>
+										<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col col-md-4">
-					<div class="gp-product">
-						<a href="/" class="gp-product__link">
-							<div class="gp-product__content">
-								<div class="gp-product__stock">Low Inventory</div>
-								<p class="gp-product__name">Tiger King</p>
-								<p class="gp-product__meta">details <br>here</p>
-								<div class="d-flex">
-									<span class="gp-product__price">US$ 33</span>
-									<button class="gp-product__cta">buy now</button>
+					<div class="col-md-4">
+						<div class="gp-discount__card">
+							<div data-cms-element-id="018d5ea73dd077f8b50459da14cfbee7" class="gp-discount__card-title">
+								<div class="cms-element-text">
+									<h2>Company Name</h2>
 								</div>
 							</div>
-							<div class="gp-product__image">
-								<img src="/product.png" alt="">
+							<div data-cms-element-id="018d5ea73dd077f8b50459dbb285220d" class="gp-discount__card-description">
+								<div class="cms-element-image justify-content-start">
+									<div class="cms-image-container is-standard">
+										<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
+									</div>
+								</div>
 							</div>
-						</a>
+							<div data-cms-element-id="018d5ea73dd077f8b50459dc4e7d0979" class="gp-discount__card-description">
+								<div class="cms-element-text">
+									<p>2,749 pound World Record Pumpkin Michael Jordan</p>
+									<div class="grower-footer">
+										<p>Promo Code</p>
+										<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col col-md-4">
-					<div class="gp-product">
-						<a href="/" class="gp-product__link">
-							<div class="gp-product__content">
-								<div class="gp-product__stock">Low Inventory</div>
-								<p class="gp-product__name">Tiger King</p>
-								<p class="gp-product__meta">details <br>here</p>
-								<div class="d-flex">
-									<span class="gp-product__price">US$ 33</span>
-									<button class="gp-product__cta">buy now</button>
+					<div class="col-md-4">
+						<div class="gp-discount__card">
+							<div data-cms-element-id="018d5ea73dd077f8b50459ddf03e61d1" class="gp-discount__card-title">
+								<div class="cms-element-text">
+									<h2>Company Name</h2>
 								</div>
 							</div>
-							<div class="gp-product__image">
-								<img src="/product.png" alt="">
+							<div data-cms-element-id="018d5ea73dd077f8b50459de8c8a823b" class="gp-discount__card-description">
+								<div class="cms-element-image justify-content-start">
+									<div class="cms-image-container is-standard">
+										<img src="http://localhost/media/4d/a3/g0/1706690053/image%204.png" srcset="http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_1920x1920.png 1920w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_800x800.png 800w, http://localhost/thumbnail/4d/a3/g0/1706690053/image%204_400x400.png 400w" sizes="(min-width: 1200px) 34vw, (min-width: 992px) 400px, (min-width: 768px) 331px, (min-width: 576px) 767px, (min-width: 0px) 575px, 34vw" class="cms-image" loading="lazy">
+									</div>
+								</div>
 							</div>
-						</a>
+							<div data-cms-element-id="018d5ea73dd077f8b50459df2eecca03" class="gp-discount__card-description">
+								<div class="cms-element-text">
+									<p>2,749 pound World Record Pumpkin Michael Jordan</p>
+									<div class="grower-footer">
+										<p>Promo Code</p>
+										<a href="#" target="_self" class="gp-btn" rel="noreferrer noopener">Buy</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</main>
+	<template data-type="pug" data-src="./template/footer.pug"></template>
 	<script src="./main.js"></script>
 </body>
 

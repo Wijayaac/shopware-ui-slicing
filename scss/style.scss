@@ -7,15 +7,16 @@ $gp-dark: #3C3D3B;
 $gp-green: #BAD3A5;
 $gp-heading-font: 'Poppins', sans-serif;
 
-@import 'scss/header';
-@import 'scss/footer';
-@import 'scss/home-hero';
-@import 'scss/share-badge';
-@import 'scss/news';
-@import 'scss/video';
-@import 'scss/discount';
-@import 'scss/text-media';
-@import 'scss/contact-form';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/home-hero';
+@import 'components/share-badge';
+@import 'components/news';
+@import 'components/video';
+@import 'components/discount';
+@import 'components/text-media';
+@import 'components/contact-form';
+@import 'components/product-detail';
 
 // CSS reset
 /*
@@ -454,5 +455,54 @@ body {
 	}
 }
 
+
+// global cart
+.cart-offcanvas.show {
+	z-index: 9999;
+
+
+	.begin-checkout-btn {
+		background-color: $gp-orange;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 36px;
+		text-align: center;
+		background-color: $gp-orange;
+		padding: 8px 16px;
+		border-radius: 40px;
+		border: none;
+
+	}
+}
+
+.offcanvas-cart-items {
+	border-color: $gp-orange !important;
+
+	.row.line-item-row {
+		justify-content: space-between;
+		margin-bottom: 16px;
+
+		.line-item-details {
+			width: 70%;
+			padding-top: 0;
+		}
+	}
+
+	.is-offcanvas .line-item-quantity-label {
+		width: 40%;
+	}
+
+	.is-offcanvas .line-item-quantity-select-wrapper {
+		width: 60%;
+	}
+
+	.line-item-total-price-value {
+		font-family: Poppins;
+		font-size: 28px;
+		font-weight: 600;
+		line-height: 28px;
+		letter-spacing: -0.03em;
+	}
+}
 
 @import './node_modules/bootstrap/dist/css/bootstrap-grid.css';
