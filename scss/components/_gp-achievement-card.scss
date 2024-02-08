@@ -1,0 +1,42 @@
+// Card achievements block
+.gp-achievement-card {
+	max-width: 1440px;
+	margin: 0 auto;
+	color: $gp-black;
+
+	@media screen and (min-width: 992px) {
+		padding: 0 40px;
+	}
+
+	.arrow-down {
+		margin-bottom: 32px;
+	}
+
+	&__item {
+		margin-bottom: 24px;
+
+		img {
+			object-fit: contain;
+			margin: 0 auto;
+
+			@media screen and (min-width: 992px) {
+				min-height: 230px;
+			}
+		}
+
+		.cms-element-text {
+			color: #000;
+			font-family: $gp-heading-font;
+			font-size: 15px;
+			line-height: 150.636%;
+			letter-spacing: -0.45px;
+
+			h3 {
+				font-size: 24px;
+				line-height: 117%;
+				letter-spacing: -0.72px;
+			}
+		}
+	}
+
+}

@@ -17,6 +17,8 @@ $gp-heading-font: 'Poppins', sans-serif;
 @import 'components/text-media';
 @import 'components/contact-form';
 @import 'components/product-detail';
+@import 'components/gp-achievement-card';
+@import 'components/gp-achievement-list';
 
 // CSS reset
 /*
@@ -125,6 +127,10 @@ body {
 		color: white;
 	}
 
+	&--green {
+		color: #709524;
+	}
+
 	&__wrapper {
 		display: flex;
 		align-items: center;
@@ -138,8 +144,22 @@ body {
 		font-style: normal;
 		font-weight: 600;
 		line-height: 115.92%;
+
 		/* 46.368px */
-		margin-left: 24px;
+		&:not(:first-child) {
+			margin-left: 24px;
+		}
+
+		@media screen and (max-width: 991px) {
+			font-size: 24px;
+		}
+	}
+
+	svg {
+		@media screen and (max-width: 991px) {
+			width: 24px;
+			height: 24px;
+		}
 	}
 }
 
@@ -505,4 +525,11 @@ body {
 	}
 }
 
-@import './node_modules/bootstrap/dist/css/bootstrap-grid.css';
+.about-page {
+	.cms-section {
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+@import '../node_modules/bootstrap/dist/css/bootstrap-grid.css';
