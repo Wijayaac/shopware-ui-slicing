@@ -13,7 +13,7 @@
 
 <body>
 	<template data-type="pug" data-src="./template/header.pug"></template>
-	<main style="height: 120vh;margin-top: 240px;">
+	<main style="margin-top: 240px;">
 		<div class="cms-section  pos-0 cms-section-default gp-consultation" style="">
 			<div class="cms-section-default boxed">
 				<div class="cms-block  pos-0 cms-block-image-text" style="">
@@ -34,6 +34,88 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cms-section" style="background-color: #F97231">
+			<div class="consultation-form">
+				<div class="container">
+					<div class="arrow-down arrow-down--white">
+						<div class="arrow-down__wrapper">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+									<g clip-path="url(#clip0_119_1758)">
+										<path d="M16.0257 25.4822C18.7839 22.721 21.4864 20.0155 24.1903 17.3128C25.2883 16.2153 26.3529 15.0803 27.5051 14.0412C29.1013 12.6001 31.5018 13.4027 31.9416 15.492C32.1628 16.5422 31.737 17.3852 31.0036 18.1168C28.0979 21.0129 25.196 23.9127 22.2977 26.8162C20.9219 28.1932 19.5447 29.5694 18.166 30.9446C16.7591 32.3454 15.2437 32.3537 13.8521 30.9586C9.57147 26.6854 5.29182 22.4099 1.0131 18.1321C0.281111 17.4005 -0.155853 16.5631 0.0570621 15.5115C0.494026 13.361 2.95995 12.5904 4.58952 14.1205C6.09107 15.5337 7.52025 17.0221 8.98004 18.4813C11.1751 20.6744 13.3692 22.8694 15.5623 25.0663C15.6932 25.1942 15.8337 25.3097 16.0257 25.4822Z" fill="#709254"></path>
+										<path d="M16.6756 9.42847C17.8279 8.3421 18.9231 7.31415 20.0155 6.28063C21.8649 4.52519 23.706 2.76418 25.5569 1.01013C26.6966 -0.0706822 28.0033 -0.289066 29.2432 0.378615C30.8714 1.25355 31.1637 3.32893 29.7999 4.66846C28.3137 6.13179 26.7815 7.54644 25.2688 8.98057C23.1582 10.992 21.0425 13.002 18.9217 15.0106C17.5217 16.3348 15.8518 16.3459 14.4574 15.0273C10.9265 11.6824 7.39826 8.33236 3.87286 4.97727C2.4576 3.63078 2.29617 2.0659 3.43033 0.889109C4.60206 -0.326627 6.42785 -0.289068 7.78466 0.994826C10.4751 3.54314 13.1632 6.09563 15.849 8.65229C16.0981 8.89154 16.3542 9.12384 16.6756 9.42847Z" fill="#8CBC6E"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_119_1758">
+											<rect width="32" height="32" fill="white" transform="translate(32) rotate(90)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+							</span>
+							<span class="arrow-down__label">Questionnaire</span>
+						</div>
+					</div>
+					<p class="consultation-form__description">Once you have purchased a consultation, I will ask you to complete these questions prior to our video call:</p>
+					<div class="consultation-form__wrapper">
+						<form>
+							<div class="consultation-form__field">
+								<label for="years-count">1. How many years have you been growing ?</label>
+								<input type="number" name="years-count" id="years-count">
+							</div>
+							<div class="consultation-form__field">
+								<label for="personal-best">2. What is your personal best ?</label>
+								<input type="text" name="personal-best" id="personal-best">
+							</div>
+							<div class="consultation-form__field">
+								<label for="goals">3. What is your goal ?</label>
+								<input type="text" name="goals" id="goals">
+							</div>
+							<div class="consultation-form__field">
+								<label for="plants-count">4. How many plants do you grow ?</label>
+								<input type="number" name="plants-count" id="plants-count">
+							</div>
+							<div class="consultation-form__field">
+								<label for="area">5. How big of an area for each plant or total size (square foot or dimensions) ?</label>
+								<input type="text" name="area" id="area">
+							</div>
+							<div class="consultation-form__field">
+								<label for="soil">6. Tell me about what you have done to the soil ?</label>
+								<textarea name="soil" id="soil"></textarea>
+							</div>
+							<div class="consultation-form__field">
+								<label for="growing-process">7. Briefly tell me about your growing process. (For example; are you burying vines, what are you feeding, how, and how often)</label>
+								<textarea name="growing-process" id="growing-process"></textarea>
+							</div>
+							<div class="consultation-form__field">
+								<label for="other">8. Anything else that would be of noteworthy interest to help the consultation ?</label>
+								<textarea name="other" id="other"></textarea>
+							</div>
+							<div class="consultation-form__field consultation-form__field--upload">
+								<label for="pictures">9. Please send a few pictures of the plants throughout the season.</label>
+								<button>
+									<span>
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_482_3471)">
+												<path d="M7.9956 15.9957C6.46441 15.9957 4.93322 15.9957 3.40203 15.9957C1.47451 15.9957 0.00247031 14.5243 0.0012207 12.6008C0.0012207 11.2994 0.0012207 9.99792 0.0012207 8.69648C0.0012207 8.03723 0.415464 7.59148 1.01465 7.60022C1.60134 7.60959 1.9981 8.04847 1.99872 8.69461C1.99872 9.97483 1.99872 11.2552 1.99872 12.5359C1.99872 13.4386 2.55605 13.9974 3.45639 13.998C6.48711 13.998 9.51825 13.998 12.5498 13.998C13.4326 13.998 13.9968 13.4361 13.9987 12.5621C13.9987 11.2711 13.9987 9.98003 13.9987 8.69149C13.9987 8.04909 14.403 7.60896 14.9909 7.60459C15.5789 7.60022 15.995 8.0416 15.9962 8.67775C15.9962 10.0206 16.0012 11.3622 15.9962 12.7063C15.9887 14.4912 14.4967 15.9907 12.7129 15.9988C11.1409 16.0032 9.56823 15.9957 7.9956 15.9957Z" fill="white" />
+												<path d="M7.00034 3.41668L4.60172 5.81521C4.46176 5.95505 4.3243 6.09739 4.18122 6.23411C3.75198 6.64614 3.15842 6.65551 2.75604 6.2597C2.3443 5.85454 2.34867 5.24773 2.78104 4.81384C4.16227 3.4275 5.54642 2.04365 6.93349 0.662297C7.05845 0.537439 7.17966 0.407586 7.30837 0.287722C7.71824 -0.0899753 8.29182 -0.103085 8.68732 0.287722C10.2181 1.80517 11.7424 3.32886 13.2603 4.85879C13.4458 5.04672 13.549 5.30058 13.5472 5.56453C13.5453 5.82848 13.4387 6.0809 13.2506 6.26626C13.1575 6.35804 13.0471 6.43059 12.926 6.47978C12.8048 6.52896 12.6751 6.55382 12.5443 6.55292C12.2801 6.5511 12.0275 6.44451 11.842 6.25658C10.9672 5.39444 10.1019 4.52167 9.23215 3.65391C9.17467 3.59647 9.11343 3.54278 8.99909 3.4354V3.81685C8.99909 6.49132 8.99909 9.1662 8.99909 11.8415C8.99909 12.3172 8.74917 12.6737 8.32118 12.821C7.92318 12.959 7.4652 12.8541 7.23527 12.5008C7.0964 12.2852 7.01906 12.0359 7.01159 11.7797C6.99597 9.13645 7.00159 6.49257 7.00159 3.85118L7.00034 3.41668Z" fill="white" />
+											</g>
+											<defs>
+												<clipPath id="clip0_482_3471">
+													<rect width="16" height="16" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+									</span>
+									<span>Add File</span>
+								</button>
+								<input type="file" name="pictures" id="pictures">
+							</div>
+							<button class="consultation-form__button">Submit</button>
+						</form>
 					</div>
 				</div>
 			</div>
