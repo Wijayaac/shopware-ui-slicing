@@ -61,38 +61,46 @@
 					</div>
 					<p class="consultation-form__description">Once you have purchased a consultation, I will ask you to complete these questions prior to our video call:</p>
 					<div class="consultation-form__wrapper">
-						<form>
+						<form enctype="multipart/form-data" method="post" name="fileinfo" id="fileinfo">
 							<div class="consultation-form__field">
-								<label for="years-count">1. How many years have you been growing ?</label>
-								<input type="number" name="years-count" id="years-count">
+								<label for="yearsCount">1. How many years have you been growing ?</label>
+								<input placeholder="Enter text here" type="number" name="yearsCount" id="yearsCount" required data-validation="text">
+								<span class="error-message">This field is required</span>
 							</div>
 							<div class="consultation-form__field">
-								<label for="personal-best">2. What is your personal best ?</label>
-								<input type="text" name="personal-best" id="personal-best">
+								<label for="personalBest">2. What is your personal best ?</label>
+								<input placeholder="Enter text here" type="text" name="personalBest" id="personalBest" required data-validation="text">
+								<span class="error-message">This field is required</span>
 							</div>
 							<div class="consultation-form__field">
 								<label for="goals">3. What is your goal ?</label>
-								<input type="text" name="goals" id="goals">
+								<input placeholder="Enter text here" type="text" name="goals" id="goals" required data-validation="text">
+								<span class="error-message">This field is required</span>
 							</div>
 							<div class="consultation-form__field">
-								<label for="plants-count">4. How many plants do you grow ?</label>
-								<input type="number" name="plants-count" id="plants-count">
+								<label for="plantsCount">4. How many plants do you grow ?</label>
+								<input placeholder="Enter text here" type="number" name="plantsCount" id="plantsCount">
+								<span class="error-message">This field is required</span>
 							</div>
 							<div class="consultation-form__field">
 								<label for="area">5. How big of an area for each plant or total size (square foot or dimensions) ?</label>
-								<input type="text" name="area" id="area">
+								<input placeholder="Enter text here" type="text" name="area" id="area">
+								<span class="error-message">This field is required</span>
 							</div>
 							<div class="consultation-form__field">
 								<label for="soil">6. Tell me about what you have done to the soil ?</label>
 								<textarea name="soil" id="soil"></textarea>
+								<span class="error-message">This field is required</span>
 							</div>
 							<div class="consultation-form__field">
-								<label for="growing-process">7. Briefly tell me about your growing process. (For example; are you burying vines, what are you feeding, how, and how often)</label>
-								<textarea name="growing-process" id="growing-process"></textarea>
+								<label for="growingProcess">7. Briefly tell me about your growing process. (For example; are you burying vines, what are you feeding, how, and how often)</label>
+								<textarea name="growingProcess" id="growingProcess"></textarea>
+								<span class="error-message">This field is required</span>
 							</div>
 							<div class="consultation-form__field">
-								<label for="other">8. Anything else that would be of noteworthy interest to help the consultation ?</label>
-								<textarea name="other" id="other"></textarea>
+								<label for="otherMessage">8. Anything else that would be of noteworthy interest to help the consultation ?</label>
+								<textarea name="otherMessage" id="otherMessage"></textarea>
+								<span class="error-message">This field is required</span>
 							</div>
 							<div class="consultation-form__field consultation-form__field--upload">
 								<label for="pictures">9. Please send a few pictures of the plants throughout the season.</label>
@@ -112,7 +120,8 @@
 									</span>
 									<span>Add File</span>
 								</button>
-								<input type="file" name="pictures" id="pictures">
+								<!-- TODO: add input file preview image when image uploaded -->
+								<input placeholder="Enter text here" type="file" name="pictures[]" multiple accept="image/png, image/gif, image/jpeg" id="pictures">
 							</div>
 							<button class="consultation-form__button">Submit</button>
 						</form>

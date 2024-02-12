@@ -7,6 +7,10 @@
       padding: 0 60px;
     }
   }
+
+  .arrow-down {
+    padding-bottom: 60px;
+  }
   &__description {
     font-size: 32px;
     font-weight: 500;
@@ -20,6 +24,23 @@
     margin-bottom: 32px;
     display: flex;
     flex-direction: column;
+    .error-message {
+      color: white;
+      font-size: 12px;
+      position: relative;
+      opacity: 0;
+      margin-top: 8px;
+      transition: opacity 0.3s ease-in-out;
+
+      &::before {
+        content: "*";
+      }
+    }
+    &.error {
+      .error-message {
+        opacity: 1;
+      }
+    }
     label {
       padding: 8px 16px;
       border-radius: 25px;
@@ -36,6 +57,10 @@
       border-right: none;
       border-bottom: 1px solid $gp-white;
       padding: 8px 16px;
+      color: $gp-white;
+      &::placeholder {
+        color: #ffcab0;
+      }
     }
     &--upload {
       position: relative;
@@ -79,5 +104,6 @@
     align-items: center;
     margin-top: 24px;
     margin-left: auto;
+    cursor: pointer;
   }
 }
