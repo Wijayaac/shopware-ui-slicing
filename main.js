@@ -3,9 +3,9 @@ function consultationFormSubmit() {
   if (!form) {
     return;
   }
-  watchFields(form);
 
   form.addEventListener("submit", function (e) {
+    watchFields(form);
     e.preventDefault();
     let hasError = isValidated(form);
 
@@ -151,11 +151,9 @@ function contactFormSubmit() {
   if (!form) {
     return;
   }
-  console.log("here");
-
-  watchFields(form);
 
   form.addEventListener("submit", function (e) {
+    watchFields(form);
     e.preventDefault();
     let hasError = isValidated(form);
 

@@ -12,10 +12,12 @@
     padding-bottom: 60px;
   }
   &__description {
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 44px;
-    color: $gp-white;
+    p {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 44px;
+      color: $gp-white;
+    }
   }
   form {
     margin-top: 32px;
