@@ -7,6 +7,8 @@ $gp-dark: #3c3d3b;
 $gp-green: #bad3a5;
 $gp-heading-font: "Poppins", sans-serif;
 
+@import "utils/reset";
+
 @import "components/header";
 @import "components/footer";
 @import "components/home-hero";
@@ -20,87 +22,7 @@ $gp-heading-font: "Poppins", sans-serif;
 @import "components/gp-achievement-card";
 @import "components/gp-achievement-list";
 @import "components/consultation-form";
-
-// CSS reset
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/*
-  2. Remove default margin
-*/
-* {
-  margin: 0;
-}
-
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/*
-  5. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/*
-  6. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/*
-  7. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/*
-  8. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
-
-// button
-button {
-  border: none;
-  outline: none;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  padding-top: 120px;
-}
+@import "components/gp-products";
 
 .container {
   @media screen and (min-width: 992px) {
@@ -159,68 +81,6 @@ body {
     @media screen and (max-width: 991px) {
       width: 24px;
       height: 24px;
-    }
-  }
-}
-
-.discount-cta {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: #f97231;
-
-  .container {
-    max-width: 1140px;
-  }
-
-  &__row {
-    position: relative;
-    border-radius: 22px;
-    background: linear-gradient(90deg, rgba(246, 100, 29, 0.8) 27.14%, rgba(246, 102, 33, 0.55) 63.95%, rgba(240, 100, 33, 0) 100%);
-  }
-
-  .col {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  &__content {
-    padding-top: 55px;
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-bottom: 60px;
-
-    h2 {
-      color: #fff;
-
-      font-size: 36px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 140%;
-      /* 50.4px */
-      margin-bottom: 24px;
-    }
-
-    a {
-      color: #f97231;
-
-      font-size: 30px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      border-radius: 46px;
-      background: #fff;
-      text-decoration: none;
-      padding: 5px 15px;
-    }
-  }
-
-  &__image {
-    img {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 636px;
-      height: auto;
     }
   }
 }
@@ -481,11 +341,10 @@ body {
 
   .begin-checkout-btn {
     background-color: $gp-orange;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 600;
-    line-height: 36px;
+    line-height: 24px;
     text-align: center;
-    background-color: $gp-orange;
     padding: 8px 16px;
     border-radius: 40px;
     border: none;
@@ -530,3 +389,95 @@ body {
 }
 
 @import "../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+
+// .discount-cta {
+//   padding-top: 80px;
+//   padding-bottom: 80px;
+//   background-color: #f97231;
+
+//   .container {
+//     max-width: 1140px;
+//   }
+
+//   &__row {
+//     position: relative;
+//     border-radius: 22px;
+//     background: linear-gradient(90deg, rgba(246, 100, 29, 0.8) 27.14%, rgba(246, 102, 33, 0.55) 63.95%, rgba(240, 100, 33, 0) 100%);
+//   }
+
+//   .col {
+//     flex: 0 0 50%;
+//     max-width: 50%;
+//   }
+
+//   &__content {
+//     padding-top: 55px;
+//     padding-left: 55px;
+//     padding-right: 55px;
+//     padding-bottom: 60px;
+
+//     h2 {
+//       color: #fff;
+
+//       font-size: 36px;
+//       font-style: normal;
+//       font-weight: 600;
+//       line-height: 140%;
+//       /* 50.4px */
+//       margin-bottom: 24px;
+//     }
+
+//     a {
+//       color: #f97231;
+
+//       font-size: 30px;
+//       font-style: normal;
+//       font-weight: 600;
+//       line-height: normal;
+//       border-radius: 46px;
+//       background: #fff;
+//       text-decoration: none;
+//       padding: 5px 15px;
+//     }
+//   }
+
+//   &__image {
+//     img {
+//       position: absolute;
+//       right: 0;
+//       bottom: 0;
+//       width: 636px;
+//       height: auto;
+//     }
+//   }
+// }
+
+// Image gradient overlay
+.gradient-overlay {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    background: linear-gradient(180deg, #bad3a5 29.5%, rgba(186, 211, 165, 0) 77.5%);
+
+    @media screen and (max-width: 991px) {
+      max-height: 200px;
+    }
+    @media screen and (max-width: 576px) {
+      max-height: 150px;
+    }
+  }
+
+  .cms-image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}

@@ -145,6 +145,21 @@ function watchFields(form) {
   });
 }
 
+// recaptcha handler
+function recaptchaHandler() {
+  const recaptchaElm = document.querySelector(".g-recaptcha");
+  if (!recaptchaElm) {
+    return;
+  }
+
+  const recaptchaSiteKey = recaptchaElm.getAttribute("data-sitekey");
+  grecaptcha.ready(function () {
+    grecaptcha.execute(recaptchaSiteKey, { action: "submit" }).then(function (token) {
+      // Add your logic to submit to your backend server here
+    });
+  });
+}
+
 // TODO: Add recaptcha handler
 function contactFormSubmit() {
   const form = document.querySelector(".gp-cf__form form");
