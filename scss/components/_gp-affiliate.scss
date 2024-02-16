@@ -1,0 +1,99 @@
+.gp-affiliate {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f97231;
+    height: 300px;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 19px;
+    background: #fff;
+    box-shadow: 0px 0px 7.7px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 48px;
+
+    &-image {
+      position: relative;
+      width: 100%;
+      padding-top: 182px;
+
+      img {
+        position: absolute;
+        width: 100%;
+        max-width: 182px;
+        margin: 0 auto;
+        height: auto;
+        object-fit: contain;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &-content {
+      padding: 35px 22px 24px 22px;
+      position: relative;
+      background-image: linear-gradient(to right, #bcbcbc 40%, rgba(255, 255, 255, 0) 20%);
+      background-position: top;
+      background-size: 20px 2px;
+      background-repeat: repeat-x;
+    }
+
+    &-name {
+      color: #000;
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100.636%;
+      /* 20.127px */
+      letter-spacing: -0.6px;
+      margin-bottom: 8px;
+    }
+
+    &-desc {
+      color: #acabab;
+      font-family: Poppins;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 122%;
+      /* 18.3px */
+      letter-spacing: -0.45px;
+      margin-bottom: 24px;
+    }
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &-button {
+      color: #fff;
+      font-family: Poppins;
+      text-decoration: none;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100.636%;
+      /* 15.095px */
+      letter-spacing: -0.45px;
+      text-transform: uppercase;
+      border-radius: 45px;
+      background: #f97231;
+      box-shadow: 0px 0px 7.7px 1px rgba(0, 0, 0, 0.1);
+      padding: 10px 20px;
+    }
+  }
+}
