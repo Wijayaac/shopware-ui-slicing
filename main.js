@@ -179,7 +179,7 @@ function contactFormSubmit() {
     // form submit
     const formData = new FormData(form);
 
-    fetch("http://localhost:81/index.php", {
+    fetch("https://shopware.blackhole.my.id/", {
       method: "POST",
       body: formData,
     })
