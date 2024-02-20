@@ -1,36 +1,28 @@
-.gp-footer {
+.drt-footer {
   background-color: $gp-dark;
   color: $gp-white;
   padding: 60px 0;
   position: relative;
-
-  @media screen and (max-width: 992px) {
-    padding: 40px 0;
-  }
-
-  .container {
-    @media screen and (min-width: 992px) {
-      padding: 0 80px;
-    }
-  }
 
   .h3 {
     color: inherit;
   }
 
   &__logo {
-    flex: 0 0 20%;
+    flex: 0 0 30%;
 
     @media screen and (max-width: 576px) {
       flex: 0 0 100%;
+      text-align: center;
     }
 
     img {
-      width: 120px;
+      width: 100%;
       height: auto;
       object-fit: contain;
       @media screen and (max-width: 991px) {
         margin: 0 auto;
+        width: 50%;
       }
     }
   }
@@ -38,7 +30,6 @@
   &__text {
     flex: 0 0 70%;
     padding-left: 20px;
-    max-width: 320px;
 
     @media screen and (max-width: 576px) {
       flex: 0 0 100%;
@@ -89,9 +80,10 @@
     margin: 0;
 
     &-item {
-      width: 30px;
-      height: auto;
-      margin: 0 20px;
+      margin: 0 8px;
+      svg {
+        width: 34px;
+      }
 
       @media screen and (max-width: 991px) {
         margin-bottom: 16px;
@@ -123,12 +115,39 @@
 
   &__copyright {
     padding-top: 20px;
-    margin-top: 50px;
+    margin-top: 24px;
     border-top: 1px solid $gp-white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
     @media screen and (max-width: 992px) {
       margin-top: 0px;
       text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      width: 134px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  &__content {
+    @media screen and (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__links {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
     }
   }
 }
