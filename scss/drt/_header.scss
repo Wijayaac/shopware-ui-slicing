@@ -12,13 +12,19 @@
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   background-color: #fff;
   z-index: 9999;
+
+  &__top {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
 
   &__wrapper {
     display: flex;
@@ -200,7 +206,7 @@
       padding: 8px 16px;
       border-radius: 20px;
       color: #fff;
-      font-family: $gp-heading-font;
+      font-family: $drt-heading-font;
       font-size: 15px;
       font-weight: 600;
       &:hover {
