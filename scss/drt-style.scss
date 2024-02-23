@@ -12,6 +12,8 @@ $drt-gold: #e2b65c;
 @import "drt/text-media";
 @import "drt/text";
 @import "drt/images-text";
+@import "drt/products-listing";
+@import "drt/product-cards";
 
 @import "../node_modules/bootstrap/dist/css/bootstrap-grid.css";
 
@@ -33,6 +35,19 @@ body {
   font-weight: 400;
   line-height: 24px;
   font-family: $drt-heading-font;
+}
+main {
+  padding-top: 80px;
+  @media screen and (min-width: 992px) {
+    padding-top: 120px;
+  }
+}
+
+.cms-page {
+  padding-top: 80px;
+  @media screen and (min-width: 991px) {
+    padding-top: 120px;
+  }
 }
 
 // Video section

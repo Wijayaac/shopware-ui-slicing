@@ -1,0 +1,87 @@
+.drt-products-listing {
+  background-image: url("/drt/border-gold.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 92%;
+  margin-top: 40px;
+  padding-top: 40px;
+
+  @media screen and (max-width: 991px) {
+    margin-top: 24px;
+    padding-top: 24px;
+    background-image: url("/drt/border-gold-mobile.svg");
+  }
+
+  .cms-element-product-listing-actions,
+  .filter-multi-select-manufacturer,
+  .filter-range,
+  .filter-panel-item .filter-panel-item-toggle {
+    display: none;
+  }
+  .filter-panel-item-dropdown {
+    display: block;
+    border: none;
+    position: relative;
+  }
+  .filter-multi-select-list {
+    display: flex;
+  }
+  .form-check-input[type="checkbox"] {
+    display: none;
+  }
+
+  .filter-property-select-list-item {
+    label {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 27px;
+    }
+  }
+  .filter-active,
+  .filter-active button {
+    background-color: $drt-gold;
+    color: $gp-white;
+    border-color: $drt-gold;
+  }
+  .form-check {
+    padding-left: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    .cms-element-sidebar-filter {
+      width: 100%;
+      button,
+      svg {
+        color: $gp-black;
+        border-color: $gp-black;
+      }
+    }
+  }
+}
+
+.drt-actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @media screen and (max-width: 991px) {
+    flex-wrap: wrap;
+  }
+  .drt-search {
+    padding-top: 24px;
+
+    .header-search-input {
+      border-top: none;
+      border-left: none;
+      border-color: $drt-gold;
+      border-width: 4px;
+    }
+    .header-search-btn {
+      border: none;
+    }
+    @media screen and (max-width: 991px) {
+      .collapse {
+        display: block;
+      }
+    }
+  }
+}
