@@ -184,6 +184,10 @@
     font-weight: 500;
     transition: opacity 400ms ease-in-out;
 
+    [data-visible="true"] & {
+      color: $drt-brown;
+    }
+
     .drt-footer & {
       color: $drt-white;
       &:hover {
